@@ -3,10 +3,10 @@ body {
   color: rgba(225, 225, 225, 0.6);
 }
 body {
-  background-color: #211328;
+  background-color: #3f1400;
 }
 body.login-body {
-  background-color: #211328;
+  background-color: #3f1400;
 }
 img {
   max-width: 100%;
