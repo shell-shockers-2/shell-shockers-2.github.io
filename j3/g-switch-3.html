@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>G-Switch 3</title>
+	<meta name="robots" content="noindex,nofollow" />
+	<meta id="viewport" name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+	<link rel="shortcut icon" type="image/png" href="g-switch-3/favicon.png">
+
+
+	<script type="text/javascript" src="g-switch-3/G-Switch3.js"></script>
+
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+	</script>
+
+	<script src="../poki-sdk.js"></script>
+
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#openfl-content {
+			background: #000000;
+			width: 100%;
+			height: 100%;
+		}
+
+		@font-face {
+			font-family: 'Meiryo UI';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/MeiryoUI.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/MeiryoUI.woff') format('woff'),
+				url('g-switch-3/assets/data/MeiryoUI.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/MeiryoUI.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Meiryo UI W53 Bold';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/MeiryoUIBold.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/MeiryoUIBold.woff') format('woff'),
+				url('g-switch-3/assets/data/MeiryoUIBold.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/MeiryoUIBold.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Un Dotum';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/UnDotum.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/UnDotum.woff') format('woff'),
+				url('g-switch-3/assets/data/UnDotum.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/UnDotum.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Un Dotum Bold';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/UnDotumBold.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/UnDotumBold.woff') format('woff'),
+				url('g-switch-3/assets/data/UnDotumBold.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/UnDotumBold.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Gerdana';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/verdana.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/verdana.woff') format('woff'),
+				url('g-switch-3/assets/data/verdana.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/verdana.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Verdana Bold';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/verdanab.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/verdanab.woff') format('woff'),
+				url('g-switch-3/assets/data/verdanab.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/verdanab.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Verdana Italic';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/verdanai.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/verdanai.woff') format('woff'),
+				url('g-switch-3/assets/data/verdanai.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/verdanai.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Verdana Bold Italic';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/verdanaz.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/verdanaz.woff') format('woff'),
+				url('g-switch-3/assets/data/verdanaz.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/verdanaz.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Microsoft YaHei Bold';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/YaHei Bold.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/YaHei Bold.woff') format('woff'),
+				url('g-switch-3/assets/data/YaHei Bold.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/YaHei Bold.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Microsoft YaHei';
+			src: url('https://just-fall.github.io/j3/g-switch-3/assets/data/YaHei.eot?') format('embedded-opentype'),
+				url('g-switch-3/assets/data/YaHei.woff') format('woff'),
+				url('g-switch-3/assets/data/YaHei.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/assets/data/YaHei.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Nokia Cellphone FC Small';
+			src: url('https://just-fall.github.io/j3/g-switch-3/flixel/fonts/nokiafc22.eot?') format('embedded-opentype'),
+				url('g-switch-3/flixel/fonts/nokiafc22.woff') format('woff'),
+				url('g-switch-3/flixel/fonts/nokiafc22.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/flixel/fonts/nokiafc22.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Monsterrat';
+			src: url('https://just-fall.github.io/j3/g-switch-3/flixel/fonts/monsterrat.eot?') format('embedded-opentype'),
+				url('g-switch-3/flixel/fonts/monsterrat.woff') format('woff'),
+				url('g-switch-3/flixel/fonts/monsterrat.ttf') format('truetype'),
+				url('https://just-fall.github.io/j3/g-switch-3/flixel/fonts/monsterrat.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this
+		page.</noscript>
+
+	<div id="openfl-content"></div>
+
+	<script type="text/javascript">
+		lime.embed ("G-Switch3", "openfl-content", 0, 0, { parameters: {} });
+	</script>
+
+</body>
+
+</html>
